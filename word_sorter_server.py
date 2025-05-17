@@ -3,8 +3,9 @@ import threading
 from text_processor import TextProcessor
 import os
 
-HOST = '127.0.0.1'
-PORT = int(os.environ.get('PORT', 10000))
+HOST = '0.0.0.0'
+PORT = int(os.environ.get('PORT', 10000))  # Render передаёт PORT как переменную среды
+
 
 # Храним глобальный набор слов
 all_words = set()
