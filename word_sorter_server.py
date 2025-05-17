@@ -1,9 +1,10 @@
 import socket
 import threading
 from text_processor import TextProcessor
+import os
 
 HOST = '127.0.0.1'
-PORT = 12345
+PORT = int(os.environ.get('PORT', 10000))
 
 # Храним глобальный набор слов
 all_words = set()
